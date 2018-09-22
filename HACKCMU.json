@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "walkwithme-171614",
+  "private_key_id": "7482f5491a4e2606ad9dbacf8796120192c9abf0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQD0IWLSFRnmKrAl\nzyNUY+Lnjq8prEzjoGfaC/VY0WWiSYh1VxMaxE1T5wMScngZiGcZyhF8nfTjKoXu\nUU83BNOvI7UWYs7I7QI6Wui0Z5IdRI+Z5Rj1BXgF95yDJqpqO2/EG39N6OnsujEm\ngdNneT3L7ffZ5YoCoWAfMk/i2vx8Xg1jz4LJ3XQBhzXPIpjt2yttrA00PEK2jFbY\njoSiQ2yqcjT0tQRd5NsWQEjvBys1oZt5c4gm1OaZ+eMrvGg/9jWmE7ayzTLiGGXf\nS9gs4gMGuxPSpE1QX/6zoBgdQPq/mF2QtKvDtlU8bdPRHVOp6CQbtBPeqS4yTxt/\nPWh1kvDPAgMBAAECggEAeIsjqGgS6buaTpEA+OJ5X6zsgL87GApUPS46byi17nQw\nlP/xxv220P74XVt4QeNARVOpXsb/7EtK5mnvm1Me0xPmjq8rO7sLppTM4odhdmIs\nJekhcZrJsOiat4eYDexbO5H4QhgHqYQmUMU6BZWwFcni4AyfIL1eIQlOuM04bo9r\nWqP4M1v4iQdCRuhyYDb7w0IZ6WXNccE60Fll7CZ+Yzd73ygpQuERjC/xVBbLL0CA\nFjwc/bzUtvz8x/Sw97xUT/z55GxSa1DYZmqBxtQZ68uY27+1AqwoE1sySfXMfKnt\nJRSutuUh0pq0D8aRw3UGNMeg/JTSfheM+Tl/LUq5AQKBgQD7LQRtV13Qvv5+IprF\nRZjAb+6DJVCbAj3nnvt2tUNJIaIJmZB5hSaGSgea2Dww4Phq0t3vZIl/ATO/+uHl\nH3mSFZCv6DJasZKQVY1wUR7o+g7WvnfRDz9ulaZhDWZsvYBEfde4cYOvcExpngvm\n5DYXZ8BQKDeGB18Tdb5MNXgO/wKBgQD40bpKPBnnMRF062rUqiW3jUtj3jDmviBj\nUHOM9taqQtVdvnkXgwh4Qr+AzmPzYm20XPJ6XbcqLVxadyenKoH8g2aom5iTRZJm\nKDGm0ceGpw1JG9O/4/VAkWMLgriEn0A1Tth9g4g1FWHaQ0/w9wGnHIVoawWhsHWL\neuu1m1nuMQKBgQCQ01gmI6X4Yugimpla/dIhw2hnPfDIL/a5wrWDsOhnFnlzx5PC\nPcAE1lKkOeIa3Nzf204UZofRL0RDgckWb5uNW9ndU6kVGiZECtBO3rdP5j8AGzrC\n1GPiw273rt5L/MgktdrYgrtHQR0OGQ8LxrJZtHzyuv2ozj9H3TAoiPv8yQKBgD6u\npx2YcnYZmGo5/FnC22mYQMvR58PZVdNvKwzyCjYuTA4ns93GdtXFCvVqCSgBPd3Y\nJIXLIh+P+doYdnbYcJKqj6weNpuzRSRTL970ri0v3Fr0la2bwecYOTlnHxDaBZTo\nXgWQozmsP1B68KKlt1bgCoO5oluPVq1itAq2LjuhAoGBAKVFsRz38OSSye0okhzT\n2Jcqq2apK/g3DXmEbDf1XNJp+fJnSUQaN0o2h0zYSmkR2L/spPvTYsyrkFmR3cAV\nNWktpSgkMoRqsj+p9yGX3e8o2rs3TsoMt8/L8QSZMHXRSo1njxoL/DTW64r3FKG9\nZh/neEEmDjpdKRnG78BxIa9l\n-----END PRIVATE KEY-----\n",
+  "client_email": "hackcmu@walkwithme-171614.iam.gserviceaccount.com",
+  "client_id": "114457514684449295759",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/hackcmu%40walkwithme-171614.iam.gserviceaccount.com"
+}
