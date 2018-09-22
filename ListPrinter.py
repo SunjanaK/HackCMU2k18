@@ -20,7 +20,7 @@ client = texttospeech.TextToSpeechClient()
 
 
 
-listy = ["cat", "made", "cake"]
+listy = ["cat", "likes", "cake"]
 import pygame
 
 i = 0
@@ -52,7 +52,7 @@ def transcribe_file(speech_file):
     for result in response.results:
         # The first alternative is the most likely one for this portion.
 
-        print(u'Transcript: {}'.format(result.alternatives[0].transcript))
+        # print(u'Transcript: {}'.format(result.alternatives[0].transcript))
         return result.alternatives[0].transcript
 
 
@@ -258,54 +258,89 @@ for word in listy:
     if len(combolist) > 1:
         combination = ' '.join(combolist)
         print(combination)
-        synthesis_input = texttospeech.types.SynthesisInput(text="Now put the words together")
+        correct2 = False
 
-        voice = texttospeech.types.VoiceSelectionParams(
-            language_code='en-US',
-            ssml_gender=texttospeech.enums.SsmlVoiceGender.NEUTRAL)
-        audio_config = texttospeech.types.AudioConfig(
-            audio_encoding=texttospeech.enums.AudioEncoding.MP3)
-        response = client.synthesize_speech(synthesis_input, voice, audio_config)
-        with open("together.mp3", 'wb') as out:
+        while not correct2:
+            synthesis_input = texttospeech.types.SynthesisInput(text="Now put the words together")
 
-            out.write(response.audio_content)
+            voice = texttospeech.types.VoiceSelectionParams(
+                language_code='en-US',
+                ssml_gender=texttospeech.enums.SsmlVoiceGender.NEUTRAL)
+            audio_config = texttospeech.types.AudioConfig(
+                audio_encoding=texttospeech.enums.AudioEncoding.MP3)
+            response = client.synthesize_speech(synthesis_input, voice, audio_config)
+            with open("together.mp3", 'wb') as out:
 
-            out.close()
-        file = "together.mp3"
-        loadmp3player(file)
-        record_file(5)
-        spoken = transcribe_file("voice.wav") #returns a string with whatever it recognizes
+                out.write(response.audio_content)
 
-        spoken_set = set(spoken.split(' '))
+                out.close()
+            file = "together.mp3"
+            loadmp3player(file)
+            record_file(5)
+            spoken = transcribe_file("voice.wav") #returns a string with whatever it recognizes
+
+            spoken_set = set(spoken.split(' '))
+            # synthesis_input = texttospeech.types.SynthesisInput(text="Good Job!")
+            # voice = texttospeech.types.VoiceSelectionParams(
+            #     language_code='en-US',
+            #     ssml_gender=texttospeech.enums.SsmlVoiceGender.NEUTRAL)
+            # audio_config = texttospeech.types.AudioConfig(
+            #     audio_encoding=texttospeech.enums.AudioEncoding.MP3)
+            # response = client.synthesize_speech(synthesis_input, voice, audio_config)
+            # with open("praise.mp3", 'wb') as out:
+            #
+            #     out.write(response.audio_content)
+            #
+            #     out.close()
+            # file = "praise.mp3"
+            # loadmp3player(file)
 
 
 
-        if spoken_set != None:
-            sentence_set = set(combination.split(' '))
-            # print(sentence_set)
-            # print("Common words:")
-            # print(spoken_set & sentence_set)
-            # print(len(spoken_set & sentence_set))
-            if len(spoken_set & sentence_set) >= 2:
-                synthesis_input = texttospeech.types.SynthesisInput(text="Good Job!")
+
+            if spoken_set != None:
+                sentence_set = set(combination.split(' '))
+                # print(sentence_set)
+                # print("Common words:")
+                # print(spoken_set & sentence_set)
+                # print(len(spoken_set & sentence_set))
+                if len(spoken_set & sentence_set) >= 2:
+                    correct2 = True
+                    synthesis_input = texttospeech.types.SynthesisInput(text="Good Job!")
+                    voice = texttospeech.types.VoiceSelectionParams(
+                        language_code='en-US',
+                        ssml_gender=texttospeech.enums.SsmlVoiceGender.NEUTRAL)
+                    audio_config = texttospeech.types.AudioConfig(
+                        audio_encoding=texttospeech.enums.AudioEncoding.MP3)
+                    response = client.synthesize_speech(synthesis_input, voice, audio_config)
+                    with open("praise.mp3", 'wb') as out:
+
+                        out.write(response.audio_content)
+
+                        out.close()
+                    file = "praise.mp3"
+                    loadmp3player(file)
+            if not correct2:
+                synthesis_input = texttospeech.types.SynthesisInput(text="Try Again!")
                 voice = texttospeech.types.VoiceSelectionParams(
                     language_code='en-US',
                     ssml_gender=texttospeech.enums.SsmlVoiceGender.NEUTRAL)
                 audio_config = texttospeech.types.AudioConfig(
                     audio_encoding=texttospeech.enums.AudioEncoding.MP3)
                 response = client.synthesize_speech(synthesis_input, voice, audio_config)
-                with open("praise.mp3", 'wb') as out:
+                with open("retry.mp3", 'wb') as out:
 
                     out.write(response.audio_content)
 
                     out.close()
-                file = "praise.mp3"
+                file = "retry.mp3"
                 loadmp3player(file)
 
 
 
+
 statement = ' '.join(listy)
-synthesis_input = texttospeech.types.SynthesisInput(text="Now say the sentence")
+synthesis_input = texttospeech.types.SynthesisInput(text="Now say the sentence!")
 print(statement)
 voice = texttospeech.types.VoiceSelectionParams(
     language_code='en-US',
